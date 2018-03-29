@@ -31,7 +31,7 @@ Ui_fileCompression = ui_fileCompression.Ui_fileCompression
 
 
 def runCallBack(app, string):
-    app.dealView.setText(app.dealView.toPlainText() + '\n' + string)
+    app.dealView.addItem(string)
 
 def successCallBack(app):
     msg_box = QtGui.QMessageBox.about(app, u"提示", u"处理完成！")
@@ -56,7 +56,7 @@ class MyApp(QtGui.QMainWindow, Ui_fileCompression):
         isCover = self.isCoverCheck.isChecked()
 
         #清空显示区域
-        self.dealView.setText("")
+        self.dealView.clear()
 
         fileHanding.folderTree(self, str(filePath), isCover, runCallBack, successCallBack,)
 
@@ -79,7 +79,7 @@ class MyApp(QtGui.QMainWindow, Ui_fileCompression):
         self.setCache('filepath', filename)
         #self.cacheUtils.setCacheString('apk_file', filename)
         self.fileInput.setText(filename)
-        print self.cache
+        
     #路径选择器
     def folderChose(self):
         path = self.getCache('folderpath') if self.getCache('folderpath') else 'C:'
@@ -87,7 +87,6 @@ class MyApp(QtGui.QMainWindow, Ui_fileCompression):
         if folder:
             self.setCache('folderpath', folder)
         self.fileInput.setText(folder)
-        print self.cache
 
 
 if __name__ == "__main__":

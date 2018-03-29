@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'fileCompression.ui'
 #
-# Created: Tue Mar 27 21:27:52 2018
+# Created: Thu Mar 29 22:01:47 2018
 #      by: PyQt4 UI code generator 4.11.3
 #
 # WARNING! All changes made in this file will be lost!
@@ -67,7 +67,7 @@ class Ui_fileCompression(object):
         self.verticalLayout_4.setSpacing(0)
         self.verticalLayout_4.setMargin(0)
         self.verticalLayout_4.setObjectName(_fromUtf8("verticalLayout_4"))
-        self.dealView = QtGui.QTextEdit(self.scrollAreaWidgetContents)
+        self.dealView = QtGui.QListWidget(self.scrollAreaWidgetContents)
         self.dealView.setObjectName(_fromUtf8("dealView"))
         self.verticalLayout_4.addWidget(self.dealView)
         self.scrollArea.setWidget(self.scrollAreaWidgetContents)
