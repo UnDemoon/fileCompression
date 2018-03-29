@@ -1,1 +1,4 @@
 *.pyc
+*.ico
+/build/
+/dist/
